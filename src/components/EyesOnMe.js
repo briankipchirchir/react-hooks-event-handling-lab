@@ -1,27 +1,24 @@
-// components/EyesOnMe.js
-
 import React from 'react';
 
-class EyesOnMe extends React.Component {
-  handleFocus = () => {
+const EyesOnMe = () => {
+  // Arrow function for focus event
+  const handleFocus = () => {
     console.log('Good!');
-  }
+  };
 
-  handleBlur = () => {
+  // Arrow function for blur event
+  const handleBlur = () => {
     console.log('Hey! Eyes on me!');
-  }
+  };
 
-  render() {
-    return (
-      <button
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-      >
-        Eyes on me
-      </button>
-    );
-  }
-}
+  return (
+    <button
+      onFocus={handleFocus} // Attach the focus event handler
+      onBlur={handleBlur}   // Attach the blur event handler
+    >
+      Eyes on me
+    </button>
+  );
+};
 
 export default EyesOnMe;
-
